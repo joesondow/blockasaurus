@@ -28,7 +28,7 @@ var Twitter = require('twitter');
 // http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
 
-function parse_tweet_id(tweet_url) {
+function parse_blocklist(blocklist) {
   var re = /\/(\d+)/g;
   var tweet_id = re.exec(tweet_url);
   return tweet_id[0].replace(/\//g,'');
