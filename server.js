@@ -12,7 +12,7 @@ const CONSUMER_KEY = process.env.CONSUMER_KEY;
 const CONSUMER_SECRET = process.env.CONSUMER_SECRET;
 // enable this through twitter's app management panel
 const CALLBACK_RESOURCE = '/access-token';
-const CALLBACK_URL = 'https://poop-blocker.glitch.me' + CALLBACK_RESOURCE;
+const CALLBACK_URL = 'https://blockasaurus.glitch.me' + CALLBACK_RESOURCE;
 
 var bodyParser = require('body-parser');
 app.use(bodyParser.json()); // support json encoded bodies

@@ -31,16 +31,16 @@
     </header>
 
     <main>
-      <p class="bold">Oh hi,</p>
+      <p class="bold">Roar</p>
       
-      <p>This blocks every single user you submit in the big text area below.</p>
+      <p>This blocks every twitter account you submit in the big text area below.</p>
       
       <p class="bold">You can rely on Twitter's OAuth services</p>
       <form action="/request-token" method="post">
-        <label class="form-block">Tweet URL <input id="tweet_url2" name="tweet_url" type="text" required class="form-block" placeholder="The URL you wish to block goes here =)" aria-labelledby="submit-block"></label>
-        <label class="form-block">Tweet URL </label><textarea id="blocklist" name="blocklist" required class="form-block" placeholder="The URL you wish to block goes here =)" aria-labelledby="submit-block">
+        <!-- <label class="form-block">Tweet URL <input id="tweet_url2" name="tweet_url" type="text" required class="form-block" placeholder="The URL you wish to block goes here =)" aria-labelledby="submit-block"></label> -->
+        <label class="form-block">Block list </label><textarea id="blocklist" name="blocklist" required class="form-block" placeholder="The account screennames to block go in here" aria-labelledby="submit-block"></textarea>
         <label class="form-block"><input id="reportauth" name="report" type="checkbox"> Report as spam?</label> <br><br>
-        <button type="submit" class="form-block">Block the poop!</button>
+        <button type="submit" class="form-block">Block them all</button>
       </form>
       
       <p class="bold">Or write in your credentials manually. The Consumer Key, Consumer Secret, Access Token, and Access Token Secret are Twitter credentials. You can get them <a href="https://apps.twitter.com/">here</a>.</p>
@@ -52,15 +52,16 @@
         <label class="form-block">Access Token Secret<input type="password" id="access_token_secret" class="form-block" name="access_token_secret" required placeholder="Access Token Secret"/></label>
         <label class="form-block">Tweet URL<input id="tweet_url" name="tweet_url" type="text" required class="form-block" placeholder="The URL you wish to block goes here =)" aria-labelledby="submit-block"></label>
         <label class="form-block"><input id="report" name="report" type="checkbox"> Report as spam?</label> <br><br>
-        <button type="submit" id="submit-block" class="form-block">Block the poop!</button>
+        <button type="submit" id="submit-block" class="form-block">Block them all</button>
       </form>
 
     </main>
 
     <footer>
-      Made by <a href="https://github.com/Rumpelcita">rumpel</a>
+      Modified by <a href="https://twitter.com/JoeSondow/">@JoeSondow</a>,   
+      based on <a href="https://github.com/Rumpelcita/poop-blocker">poop-blocker</a> 
+      made by <a href="https://github.com/Rumpelcita">rumpel</a>
       with <a href="https://glitch.com">Glitch</a>!<br>
-      <a href="https://github.com/Rumpelcita/poop-blocker">code</a> 💩
     </footer>
 
     <!-- include the Glitch button to show what the webpage is about and
