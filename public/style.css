@@ -14,7 +14,8 @@ body {
 
 h1 {
   font-style: italic;
-  color: #373fff;
+  /* color: #373fff;  */ 
+  color: #98bf64;  /* #354a21; /* #74b72e; */
 }
 
 .bold {
@@ -28,7 +29,7 @@ p {
 form {
   margin-bottom: 25px;
   padding: 15px;
-  background-color: brown;
+  background-color: #3a5311;
   display: inline-block;
   width: 100%;
   max-width: 340px;
@@ -36,7 +37,17 @@ form {
 }
 
 form.login {
-  background-color: white;
+  background-color: black;
+}
+
+input, textarea {
+  background-color: black;
+  color: #DDD;
+}
+
+textarea.form-block {
+  height: 200px;
+  width: 300px;
 }
 
 .form-block {
