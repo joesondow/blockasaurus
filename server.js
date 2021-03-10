@@ -165,9 +165,9 @@ app.get(CALLBACK_RESOURCE, function(request, response) {
   var request_token = request.query.oauth_token;
   var oauth_verifier = request.query.oauth_verifier;
   var blocklist = request.query.blocklist;
-  console.log("__"+blocklist+"__");
+  // console.log("__"+blocklist+"__");
   var accounts = parse_blocklist(blocklist);
-  console.log("__"+accounts.length+"__");
+  // console.log("__"+accounts.length+"__");
   var report = eval_report(request.body.reportauth);
 
   var oa = get_twitter_oauth(accounts);
