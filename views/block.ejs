@@ -31,9 +31,16 @@
     </header>
 
     <main>
-      <p class="bold">Users Blocked!</p>
+      <p class="bold"><% accounts.length %> users Blocked!</p>
       
-      
+      Y<p>
+      You can check to make sure:
+      </p>
+      <ul>
+      <% for(var i = 0; i < accounts.length; i++) { %>
+        <li><a target="checkblocked" href="https://twitter.com/<%= accounts[i] %>">@<%= accounts[i] %></a></li>
+      <% } %>
+      </ul>
       
       <a href="https://blockasaurus.glitch.me">Block some more</a>?
       

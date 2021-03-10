@@ -186,7 +186,7 @@ app.get(CALLBACK_RESOURCE, function(request, response) {
       client = null;
 
       ejs.renderFile(__dirname + '/views/block.ejs', 
-       {}, // {tweet_url: tweet_url},
+        {accounts: accounts}, 
         function(err, str) { response.send(str); }
       );
     }

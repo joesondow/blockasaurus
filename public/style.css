@@ -9,11 +9,15 @@ body {
   font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
   margin: 2em;
   background-color: black;
-  color: #BBB;
-  link: #FFFF00;
-  alink: #FFFF00;
-  vlink: #FFFF00;
+  color: #BBB; 
+    
+
 }
+
+a:link { color: #FFFF00;}
+a:visited { color: #FFFF00;}
+a:hover { color: #FFFF00;}
+a:active { color: #FFFF00;}
 
 h1 {
   font-style: italic;
