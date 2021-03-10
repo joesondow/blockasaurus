@@ -30,6 +30,7 @@ app.use(express.static('public'));
 
 function parse_blocklist(blocklist) {
   var tokens = blocklist.split(/[^_A-Za-z0-9]/);
+  var screenNamesSet = new Set();
   var screenNames = [];
   var skipTokens = ["https", "http", "twitter", "com", "status", ]
   // var tokens = blocklist.split(/[ ,\n]/);
@@ -37,6 +38,7 @@ function parse_blocklist(blocklist) {
   tokens.forEach((token) => {
     console.log("--" + token + "--");
     if (token.length >= 4 && token.length <= 15 && !skipTokens.includes(token)) {
+      screenNamesSet.add(token);
       screenNames.push(token);
     }
   });
