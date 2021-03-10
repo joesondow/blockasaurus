@@ -76,6 +76,7 @@ function report_and_block(client, screen_name) {
       if (errors) {
         // errors.forEach((error) => {
         //   console.log(error['message']);
+        console.log(errors);
         // });
       }
       else {
@@ -91,6 +92,7 @@ function block(client, screen_name){
     {screen_name: screen_name},
     function(errors, response) {
       if (errors) {
+        console.log(errors);
         // errors.forEach((error) => {
         //   console.log(error['message']);
         // });
