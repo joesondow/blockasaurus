@@ -29,11 +29,14 @@ var Twitter = require('twitter');
 app.use(express.static('public'));
 
 function parse_blocklist(blocklist) {
+  var tokens = blocklist.split(/[ ,\\n]/);
+  console.log(tokens.length);
+  tokens.forEach()
   
-  
-  var re = /\/(\d+)/g;
-  var tweet_id = re.exec(tweet_url);
-  return tweet_id[0].replace(/\//g,'');
+  // var re = /\/(\d+)/g;
+  // var tweet_id = re.exec(tweet_url);
+  // return tweet_id[0].replace(/\//g,'');
+  return [];
 }
 
 function eval_report(report){
