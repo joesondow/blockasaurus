@@ -1,10 +1,10 @@
-Poop blocker 💩
+Blockasaurus 🦖
 =================
 
 What's this?
 ------------
 
-This blocks every single user who retweeted an specific tweet and allows you to report them as spam if you so choose.
+This blocks all the twitter accounts you submit in the form all at once and allows you to report them as spam if you so choose.
 
 Why?
 ----
@@ -14,7 +14,7 @@ Because sometimes people on the internet can be unpleasant and/or scary and you 
 Usage
 -----
 
-You might need to register a Twitter Application first. Go to [poop-blocker.glitch.me](https://poop-blocker.glitch.me/), add your Twitter credentials (Consumer Key, Consumer Secret, Access Token, Access Token Secret), put the tweet url in the url field, press the block button and you're done!
+You can login with your Twitter account to grant read/write API access for your account to the Blockasaurus Twitter Application. Alternatively, you can register your own Twitter Application. Go to [blockasaurus.glitch.me](https://blockasaurus.glitch.me/), add your Twitter credentials (Consumer Key, Consumer Secret, Access Token, Access Token Secret), put the list of twitter screennames you want to block in the blocklist textarea, press the block button and you're done!
 
 
 Libraries used
@@ -25,15 +25,9 @@ Libraries used
 - [body-parser](https://github.com/expressjs/body-parser)
 - [ejs](http://ejs.co/)
 
-TO DO
------
-
-- Add Oauth support, to make the process more accesible. 
 
 
-Made by [rumpelcita](https://github.com/Rumpelcita)
-
-[code](https://github.com/Rumpelcita/poop-blocker)
+Modified by [@JoeSondow](https://twitter.com/JoeSondow) based on [poop-blocker](https://poop-blocker.glitch.me/) made by [rumpelcita](https://github.com/Rumpelcita) with [Glitch](https://glitch.com)!
 
 
 -------------------
