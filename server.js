@@ -34,20 +34,16 @@ function parse_blocklist(blocklist) {
   var skipTokens = ["https", "http", "twitter", "com", "status", ]
   // var tokens = blocklist.split(/[ ,\n]/);
   console.log(tokens.length);
-  tokens.forEach((token) => {
-    console.log("--" + token + "--");
-    if (token.length >= 4 && token.length <= 15 && !skipTokens.includes(token)) {
-      screenNames.push(token);
-    }
-  });
-  screenNames.forEach((token) => {
-    
-  });
-  
-  // var re = /\/(\d+)/g;
-  // var tweet_id = re.exec(tweet_url);
-  // return tweet_id[0].replace(/\//g,'');
-  return [];
+  // tokens.forEach((token) => {
+  //   console.log("--" + token + "--");
+  //   if (token.length >= 4 && token.length <= 15 && !skipTokens.includes(token)) {
+  //     screenNames.push(token);
+  //   }
+  // });
+  // screenNames.forEach((screenName) => {
+  //   console.log("++" + screenName + "++");
+  // });
+  return screenNames;
 }
 
 function eval_report(report){
