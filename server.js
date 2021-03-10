@@ -74,9 +74,9 @@ function report_and_block(client, screen_name) {
     {screen_name: screen_name, perform_block: true},
     function(errors, response) {
       if (errors) {
-        errors.forEach((error) => {
-          console.log(error['message']);
-        });
+        // errors.forEach((error) => {
+        //   console.log(error['message']);
+        // });
       }
       else {
         console.log('user @' + screen_name + ' has been blocked!');
@@ -91,9 +91,9 @@ function block(client, screen_name){
     {screen_name: screen_name},
     function(errors, response) {
       if (errors) {
-        errors.forEach((error) => {
-          console.log(error['message']);
-        });
+        // errors.forEach((error) => {
+        //   console.log(error['message']);
+        // });
       } else {
         console.log('user @' + screen_name + ' has been blocked!');
       }
