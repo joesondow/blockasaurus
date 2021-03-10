@@ -34,9 +34,9 @@ function parse_blocklist(blocklist) {
   var screenNames = [];
   var skipTokens = ["https", "http", "twitter", "com", "status", ]
   // var tokens = blocklist.split(/[ ,\n]/);
-  console.log(tokens.length);
+  // console.log(tokens.length);
   tokens.forEach((token) => {
-    console.log("--" + token + "--");
+    // console.log("--" + token + "--");
     if (token.length >= 4 && token.length <= 15 && !skipTokens.includes(token)) {
       screenNamesSet.add(token);
     }
@@ -45,7 +45,7 @@ function parse_blocklist(blocklist) {
     screenNames.push(screenname);
   });
   screenNames.forEach((screenName) => {
-    console.log("++" + screenName + "++");
+    // console.log("++" + screenName + "++");
   });
   return screenNames;
 }
