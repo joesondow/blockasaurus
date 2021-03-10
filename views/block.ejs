@@ -31,11 +31,13 @@
     </header>
 
     <main>
-      <p class="bold"><%= accounts.length %> users blocked!</p>
-      
-      <p>
-      You can check to make sure:
-      </p>
+      <p class="bold">Attempted to block <%= accounts.length %> users!</p>
+
+      <% if (accounts.length > 20) { %>
+      <p>Currently, small batches have a higher rate of success than large batches.<p>
+      <% } %>
+
+      <p>You can check to see how many were successfully blocked:</p>
       <ul>
       <% for(var i = 0; i < accounts.length; i++) { %>
         <li><a target="checkblocked" href="https://twitter.com/<%= accounts[i] %>">@<%= accounts[i] %></a></li>
