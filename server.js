@@ -39,8 +39,10 @@ function parse_blocklist(blocklist) {
     console.log("--" + token + "--");
     if (token.length >= 4 && token.length <= 15 && !skipTokens.includes(token)) {
       screenNamesSet.add(token);
-      screenNames.push(token);
     }
+  });
+  screenNamesSet.forEach((screenname) => {
+    screenNames.push(screenname);
   });
   screenNames.forEach((screenName) => {
     console.log("++" + screenName + "++");
