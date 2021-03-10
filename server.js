@@ -29,9 +29,20 @@ var Twitter = require('twitter');
 app.use(express.static('public'));
 
 function parse_blocklist(blocklist) {
-  var tokens = blocklist.split(/[ ,\\n]/);
+  var tokens = blocklist.split(/[^_A-Za-z0-9]/);
+  var screenNames = [];
+  var skipTokens = ["https", "http", "twitter", "com", "status", ]
+  // var tokens = blocklist.split(/[ ,\n]/);
   console.log(tokens.length);
-  tokens.forEach()
+  tokens.forEach((token) => {
+    console.log("--" + token + "--");
+    if (token.length >= 4 && token.length <= 15 && !skipTokens.includes(token)) {
+      screenNames.push(token);
+    }
+  });
+  screenNames.forEach((token) => {
+    
+  });
   
   // var re = /\/(\d+)/g;
   // var tweet_id = re.exec(tweet_url);
