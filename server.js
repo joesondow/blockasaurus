@@ -34,15 +34,15 @@ function parse_blocklist(blocklist) {
   var skipTokens = ["https", "http", "twitter", "com", "status", ]
   // var tokens = blocklist.split(/[ ,\n]/);
   console.log(tokens.length);
-  // tokens.forEach((token) => {
-  //   console.log("--" + token + "--");
-  //   if (token.length >= 4 && token.length <= 15 && !skipTokens.includes(token)) {
-  //     screenNames.push(token);
-  //   }
-  // });
-  // screenNames.forEach((screenName) => {
-  //   console.log("++" + screenName + "++");
-  // });
+  tokens.forEach((token) => {
+    console.log("--" + token + "--");
+    if (token.length >= 4 && token.length <= 15 && !skipTokens.includes(token)) {
+      screenNames.push(token);
+    }
+  });
+  screenNames.forEach((screenName) => {
+    console.log("++" + screenName + "++");
+  });
   return screenNames;
 }
 
@@ -55,42 +55,19 @@ function eval_report(report){
 }
 
 function blockAll(client, accounts, report=false, cursor=null) {
-  accounts.forEach((id) => {
+  accounts.forEach((screen_name) => {
     if (report){
-      report_and_block(client, id);
+      report_and_block(client, screen_name);
     } else {
-      block(client, id);
+      block(client, screen_name);
     }
   });
 }
 
-// fetches every single user who retweeted the tweet and blocks them
-function fetch_retweeters_no(client, tweet_id, report=false, cursor=null){
-  client.get(
-    'statuses/retweeters/ids.json',
-    {id: tweet_id, stringify_ids: true, cursor: cursor},
-    function(error, response) {
-      if(error)
-        throw error;
-      var ids = response['ids'];
-      var next_cursor = response['next_cursor_str'];
-      ids.forEach((id) => {
-        if (report){
-          report_and_block(client, id);
-        } else {
-          block(client, id);
-        }
-      });
-      if (response['next_cursor'] !== 0)
-        fetch_retweeters_no(client, tweet_id, report, cursor);
-    }
-  );
-}
-
-function report_and_block(client, user_id) {
+function report_and_block(client, screen_name) {
   client.post(
     'users/report_spam.json',
-    {user_id: user_id, perform_block: true},
+    {screen_name: screen_name, perform_block: true},
     function(errors, response) {
       if (errors) {
         errors.forEach((error) => {
@@ -98,23 +75,23 @@ function report_and_block(client, user_id) {
         });
       }
       else {
-        console.log('user ' + user_id + ' has been blocked!');
+        console.log('user @' + screen_name + ' has been blocked!');
       }
     }
   );
 }
 
-function block(client, user_id){
+function block(client, screen_name){
   client.post(
     'blocks/create.json',
-    {user_id: user_id},
+    {screen_name: screen_name},
     function(errors, response) {
       if (errors) {
         errors.forEach((error) => {
           console.log(error['message']);
         });
       } else {
-        console.log('user ' + user_id + ' has been blocked!');
+        console.log('user @' + screen_name + ' has been blocked!');
       }
     }
   );
