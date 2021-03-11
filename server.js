@@ -110,6 +110,12 @@ app.get('/', function(request, response) {
 });
 
 
+// http://expressjs.com/en/starter/basic-routing.html
+app.get('/faq', function(request, response) {
+  response.sendFile(__dirname + '/views/faq.html');
+});
+
+
 app.post('/block', function(request, response) {
   var accounts = parse_blocklist(request.body.blocklist);
   // var tweet_url = request.body.tweet_url;

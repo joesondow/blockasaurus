@@ -35,7 +35,7 @@
       
       <p>This blocks every twitter account you submit in the big text area below.</p>
       
-      <p class="bold">You can use Twitter's OAuth services</p>
+      <p class="bold">This will use Twitter's OAuth services</p>
       <form action="/request-token" method="post">
         <!-- <label class="form-block">Tweet URL <input id="tweet_url2" name="tweet_url" type="text" required class="form-block" placeholder="The URL you wish to block goes here =)" aria-labelledby="submit-block"></label> -->
         <label class="form-block">Block list <textarea name="blocklist" required class="form-block" placeholder="The account screen names to block go in here. @ symbols are optional. Any separators are fine: spaces, commas, newlines, whatever. Duplicates get skipped." aria-labelledby="submit-block"></textarea></label>
@@ -54,14 +54,18 @@
         <label class="form-block"><input id="report" name="report" type="checkbox"> Report as spam?</label> <br><br>
         <button type="submit" id="submit-block" class="form-block">Block them all</button>
       </form> -->
+      
+      <p>
+        <a href="/faq">FAQ</a>
+      </p>
 
     </main>
 
     <footer>
-      Modified by <a href="https://twitter.com/JoeSondow/">@JoeSondow</a>,   
+      Made by <a href="https://twitter.com/JoeSondow/">@JoeSondow</a>,   
       based on <a href="https://github.com/Rumpelcita/poop-blocker">poop-blocker</a> 
       made by <a href="https://github.com/Rumpelcita">rumpel</a>
-      with <a href="https://glitch.com">Glitch</a>!<br>
+      with <a href="https://glitch.com">Glitch</a><br>
     </footer>
 
     <!-- include the Glitch button to show what the webpage is about and

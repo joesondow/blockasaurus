@@ -10,14 +10,12 @@ body {
   margin: 2em;
   background-color: black;
   color: #BBB; 
-    
-
 }
 
-a:link { color: #FFFF00;}
-a:visited { color: #FFFF00;}
-a:hover { color: #FFFF00;}
-a:active { color: #FFFF00;}
+footer a:link,    main a:link    { color: #FFFF00; }
+footer a:visited, main a:visited { color: #FFFF00; }
+footer a:hover,   main a:hover   { color: #FFFF00; }
+footer a:active,  main a:active  { color: #FFFF00; }
 
 h1 {
   font-style: italic;
@@ -29,7 +27,7 @@ h1 {
   font-weight: bold;
 }
 
-p {
+p, h1, h2, h3, h4, h5, h6 {
   max-width: 600px;
 }
 

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Blockasaurus 🦖</title>
+    <meta name="description" content="A cool thing made with Glitch" />
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://glitch.com/edit/favicon-app.ico"
+      type="image/x-icon"
+    />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/client.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        Blockasaurus 🦖
+      </h1>
+    </header>
+
+    <main>
+      <p>
+        <a href="/">&lt;-- Back to home page</a>
+      </p>
+      <section class="faq">
+        <h1>Frequently Asked Questions</h1>
+        <h2>How many usernames can I block at once?</h2>
+        <p>
+          Anecdotally, it seems like blocking more than about 20 or 30 accounts
+          at a time tends to result in a lot of skipped ones. I'm looking into
+          ways to fix that, but it's tricky so it may be a while.
+        </p>
+        <h2>
+          Can I paste in a list of screen names with stuff like "@/" and "@." in
+          front of them?
+        </h2>
+        <p>
+          Yes. Blockasaurus ignores all special characters. It looks for valid
+          twitter handles and skips everything else. Newlines, spaces, commas,
+          @-symbols, dots, slashes, whatever. A valid Twitter handle is any
+          contiguous string of 4 to 15 characters that consist solely of
+          underscores, letters, and /or numbers.
+        </p>
+        <h2>
+          Can I block accounts by numerical user ID instead of @-screenname?
+        </h2>
+        <p>Not at this time, no.</p>
+        <h2>
+          Why does Blockasaurus ask you to authenticate your Twitter account
+          again every time you use it?
+        </h2>
+        <p>
+          Because it doesn't store your credentials so it doesn't remember you.
+          This also means there is no storage for bad actors to hack into.
+        </p>
+        <h2>
+          Why does Blockasaurus ask for so many permissions to do stuff in my
+          Twitter account?
+        </h2>
+        <p>
+          Twitter doesn't have fine-grained access controls. They should but
+          they don't. The permissions list you see on the authentication screen
+          is what Twitter calls "read/write" access, which is the only way
+          Twitter allows an app to block accounts for you.
+        </p>
+        <h2>
+          Why should I trust Blockasaurus not to do something bad with my
+          account credentials?
+        </h2>
+        <h3>Trust is earned</h3>
+        <p>
+          You should be skeptical of every application that you use for
+          interacting with your Twitter account, and use your best judgement
+          about which app creators you trust. Blockasaurus is maintained by me,
+          <a href="https://twitter.com/JoeSondow">@JoeSondow</a>, and it's your
+          decision whether to trust me. If you know me you might find me
+          trustworthy. If not, read on for options.
+        </p>
+        <h3>Revoke permissions</h3>
+        <p>
+          It's a good idea to
+          <a href="https://twitter.com/settings/connected_apps"
+            >remove any lingering application permissions</a>
+          that you no longer need from your Twitter account. You can safely do
+          this after each use of Blockasaurus if you like. Maybe delete a few
+          others you don't need anymore while you're in there too.
+        </p>
+        <h3>Options that don't require trusting me include:</h3>
+        <h3>Code review</h3>
+        <p>
+          <a href="https://glitch.com/~blockasaurus">Read the source code</a>,
+          or ask a JavaScript-savvy friend to read it for you. Check that it
+          doesn't do anything bad.
+        </p>
+        <h3>Roll your own</h3>
+        <p>
+          Remix the application by clicking the fishies in the upper right
+          corner and clicking "Remix on Glitch". This will give you your own
+          copy of the code to modify, and your own Glitch application URL.
+          <a href="https://apps.twitter.com"
+            >Register your own Twitter application</a>
+          with a callback URL matching your Glitch app with "/access-token"
+          appended to the URL. Next, get your Twitter app's credentials and put
+          them in the .env file of your Glitch app. Now you have your own
+          version of Blockasaurus that does not interact with anything I have
+          access to. As a bonus, you can also modify your version to suit your
+          liking.
+        </p>
+        <h2>
+          My question isn't answered here. Where should I ask?
+        </h2>
+        <p>
+          Ask <a href="https://twitter.com/JoeSondow">@JoeSondow</a> on Twitter.
+        </p>
+      </section>
+      <p>
+        <a href="/">&lt;-- Back to home page</a>
+      </p>
+    </main>
+
+    <footer>
+      Made by <a href="https://twitter.com/JoeSondow/">@JoeSondow</a>, based on
+      <a href="https://github.com/Rumpelcita/poop-blocker">poop-blocker</a> made
+      by <a href="https://github.com/Rumpelcita">rumpel</a> with
+      <a href="https://glitch.com">Glitch</a><br />
+    </footer>
+
+    <!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js"></script>
+  </body>
+</html>
