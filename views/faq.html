@@ -32,16 +32,16 @@
       </p>
       <section class="faq">
         <h1>Frequently Asked Questions</h1>
-        <h2>How many usernames can I block at once?</h2>
+        <h3>How many usernames can I block at once?</h3>
         <p>
           Anecdotally, it seems like blocking more than about 20 or 30 accounts
           at a time tends to result in a lot of skipped ones. I'm looking into
           ways to fix that, but it's tricky so it may be a while.
         </p>
-        <h2>
+        <h3>
           Can I paste in a list of screen names with stuff like "@/" and "@." in
           front of them?
-        </h2>
+        </h3>
         <p>
           Yes. Blockasaurus ignores all special characters. It looks for valid
           twitter handles and skips everything else. Newlines, spaces, commas,
@@ -49,33 +49,43 @@
           contiguous string of 4 to 15 characters that consist solely of
           underscores, letters, and /or numbers.
         </p>
-        <h2>
+        <h3>
           Can I block accounts by numerical user ID instead of @-screenname?
-        </h2>
+        </h3>
         <p>Not at this time, no.</p>
-        <h2>
+        <h3>How can I share my blocklist?</h3>
+        <p>
+          For now, your personal blocklist might be too big to be practical in 
+          Blockasaurus. This version is more for blocking smaller sets of 
+          accounts that many people want to block quickly. That said, you can
+          export your blocklist by <a 
+          href="https://help.twitter.com/en/managing-your-account/accessing-your-twitter-data"
+          >requesting your data from Twitter</a> and then share it with whomever
+          you'd like.
+        </p>
+        <h3>
           Why does Blockasaurus ask you to authenticate your Twitter account
           again every time you use it?
-        </h2>
+        </h3>
         <p>
           Because it doesn't store your credentials so it doesn't remember you.
           This also means there is no storage for bad actors to hack into.
         </p>
-        <h2>
+        <h3>
           Why does Blockasaurus ask for so many permissions to do stuff in my
           Twitter account?
-        </h2>
+        </h3>
         <p>
           Twitter doesn't have fine-grained access controls. They should but
           they don't. The permissions list you see on the authentication screen
           is what Twitter calls "read/write" access, which is the only way
           Twitter allows an app to block accounts for you.
         </p>
-        <h2>
+        <h3>
           Why should I trust Blockasaurus not to do something bad with my
           account credentials?
-        </h2>
-        <h3>Trust is earned</h3>
+        </h3>
+        <h4>Trust is earned</h4>
         <p>
           You should be skeptical of every application that you use for
           interacting with your Twitter account, and use your best judgement
@@ -84,7 +94,7 @@
           decision whether to trust me. If you know me you might find me
           trustworthy. If not, read on for options.
         </p>
-        <h3>Revoke permissions</h3>
+        <h4>Revoke permissions</h4>
         <p>
           It's a good idea to
           <a href="https://twitter.com/settings/connected_apps"
@@ -93,14 +103,14 @@
           this after each use of Blockasaurus if you like. Maybe delete a few
           others you don't need anymore while you're in there too.
         </p>
-        <h3>Options that don't require trusting me include:</h3>
-        <h3>Code review</h3>
+        <h4>Options that don't require trusting me include:</h4>
+        <h4>Code review</h4>
         <p>
           <a href="https://glitch.com/~blockasaurus">Read the source code</a>,
           or ask a JavaScript-savvy friend to read it for you. Check that it
           doesn't do anything bad.
         </p>
-        <h3>Roll your own</h3>
+        <h4>Roll your own</h4>
         <p>
           Remix the application by clicking the fishies in the upper right
           corner and clicking "Remix on Glitch". This will give you your own
@@ -114,9 +124,9 @@
           access to. As a bonus, you can also modify your version to suit your
           liking.
         </p>
-        <h2>
+        <h3>
           My question isn't answered here. Where should I ask?
-        </h2>
+        </h3>
         <p>
           Ask <a href="https://twitter.com/JoeSondow">@JoeSondow</a> on Twitter.
         </p>
