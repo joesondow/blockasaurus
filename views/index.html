@@ -39,7 +39,8 @@
       <form action="/request-token" method="post">
         <!-- <label class="form-block">Tweet URL <input id="tweet_url2" name="tweet_url" type="text" required class="form-block" placeholder="The URL you wish to block goes here =)" aria-labelledby="submit-block"></label> -->
         <label class="form-block">Block list <textarea name="blocklist" required class="form-block" placeholder="The account screen names to block go in here. @ symbols are optional. Any separators are fine: spaces, commas, newlines, whatever. Duplicates get skipped." aria-labelledby="submit-block"></textarea></label>
-        <label class="form-block"><input id="reportauth" name="report" type="checkbox"> Report as spam?</label> <br><br>
+        <!-- Reporting as spam does not work in poop-blocked or blockasaurus so far. Maybe add it back in later with testing. -->
+        <!-- <label class="form-block"><input id="reportauth" name="report" type="checkbox"> Report as spam?</label> <br><br> -->
         <button type="submit" class="form-block">Block them all</button>
       </form>
       
