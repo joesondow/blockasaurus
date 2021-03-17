@@ -20,10 +20,9 @@
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css">
     
-    <!-- import the webpage's client-side javascript file -->
-    <script src="/client.js" defer></script>
   </head>
   <body>
+    
     <header>
       <h1>
         Blockasaurus 🦖
@@ -31,6 +30,7 @@
     </header>
 
     <main>
+      <div id="twitterUser" style="position:fixed;top:20px;right:20px;"></div>
       <p class="bold">Attempted to block <%= accounts.length %> users!</p>
 
       <% if (accounts.length > 20) { %>
@@ -38,13 +38,20 @@
       <% } %>
 
       <p>You can check to see how many were successfully blocked:</p>
-      <ul>
-      <% for(var i = 0; i < accounts.length; i++) { %>
-        <li><a target="checkblocked" href="https://twitter.com/<%= accounts[i] %>">@<%= accounts[i] %></a></li>
-      <% } %>
-      </ul>
-      
-      <a href="https://blockasaurus.glitch.me">Block some more</a>?
+      <table class="blockTargets">
+        <tbody>
+          <% for (var i = 0; i < accounts.length; i++) { %>
+          <tr>
+            <td id="td_account_<%= accounts[i] %>"><a target="checkblocked" href="https://twitter.com/<%= accounts[i] %>">@<%= accounts[i] %></a></td>
+            <td id="td_status_<%= accounts[i] %>"><img src="https://cdn.glitch.com/a696e8e5-b462-4fbc-8254-b277368ab8d4%2Fspinner12.gif?v=1615542690499"></td>
+          </tr>
+          <% } %>
+        </tbody>
+      </table>
+
+      <p>
+        <a href="/">Block some more</a>?
+      </p>
       
     </main>
 
@@ -55,10 +62,34 @@
       with <a href="https://glitch.com">Glitch</a>!<br>
     </footer>
 
+    <!-- import the webpage's client-side javascript file -->
+    <script>
+      (function() {
+        var screenNamesToBlock = [
+        <% for (var k = 0; k < accounts.length; k++) { %>
+          <% if (k >= 1) { %>,<% } %>
+          '<%= accounts[k] %>'
+        <% } %>
+        ];
+        window.blockasaurus = {
+          <% if (accessTokenPair) { %>
+          accessTokenPair: '<%= accessTokenPair %>',
+          <% } %>
+          screenNamesToBlock: screenNamesToBlock
+        };
+      })();
+    </script>
+
+    <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+    <script src="/client.js" defer></script>
+    
     <!-- include the Glitch button to show what the webpage is about and
           to make it easier for folks to view source and remix -->
-    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <div class="glitchButton"></div>
     <script src="https://button.glitch.me/button.js"></script>
-
+        
   </body>
 </html>

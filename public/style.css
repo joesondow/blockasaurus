@@ -17,6 +17,11 @@ footer a:visited, main a:visited { color: #FFFF00; }
 footer a:hover,   main a:hover   { color: #FFFF00; }
 footer a:active,  main a:active  { color: #FFFF00; }
 
+table.blockTargets, table.blockTargets td, table.blockTargets th {
+  border: 1px solid gray;
+  border-spacing: 0;
+}
+
 h1 {
   font-style: italic;
   /* color: #373fff;  */ 
@@ -76,6 +81,12 @@ button {
 
 button:hover {
   background-color: yellow;
+}
+
+div.glitchButton {
+  position: fixed !important;
+  top: 100px;
+  right: 20px;
 }
 
 button:active {

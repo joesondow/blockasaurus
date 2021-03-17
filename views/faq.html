@@ -15,9 +15,6 @@
 
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="/style.css" />
-
-    <!-- import the webpage's client-side javascript file -->
-    <script src="/client.js" defer></script>
   </head>
   <body>
     <header>
@@ -27,6 +24,7 @@
     </header>
 
     <main>
+      <div id="twitterUser" style="position:fixed;top:20px;right:20px;"></div>
       <p>
         <a href="/">&lt;-- Back to home page</a>
       </p>
@@ -148,10 +146,17 @@
       by <a href="https://github.com/Rumpelcita">rumpel</a> with
       <a href="https://glitch.com">Glitch</a><br />
     </footer>
-
+    
+    <script
+			  src="https://code.jquery.com/jquery-3.6.0.min.js"
+			  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			  crossorigin="anonymous"></script>
+    <script src="/client.js" defer></script>
+    
     <!-- include the Glitch button to show what the webpage is about and
           to make it easier for folks to view source and remix -->
-    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <div class="glitchButton"></div>
     <script src="https://button.glitch.me/button.js"></script>
+    
   </body>
 </html>
