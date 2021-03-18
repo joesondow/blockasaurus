@@ -52,16 +52,22 @@
         <h3>
           Can I block accounts by numerical user ID instead of @-screenname?
         </h3>
-        <p>Not at this time, no.</p>
+        <p>Not at this time, no. I hope to add this functionality later.</p>
+        <h3>Does the system accept Twitter's own block.js format from a Twitter archive?</h3>
+        <p>
+          Currently no. block.js uses numerical user ids, and Blockasaurus
+          currently only handles screen names.
+        </p>
         <h3>How can I share my blocklist?</h3>
         <p>
           For now, your personal blocklist might be too big to be practical in 
           Blockasaurus. This version is more for blocking smaller sets of 
-          accounts that many people want to block quickly. That said, you can
+          accounts that many people want to block quickly. You can
           export your blocklist by <a 
           href="https://help.twitter.com/en/managing-your-account/accessing-your-twitter-data"
-          >requesting your data from Twitter</a> and then share it with whomever
-          you'd like.
+          >requesting your data from Twitter</a> but the block.js file only 
+          has numerical user ids, and Blockasarus currently only uses screen
+          names.
         </p>
         <h3>
           Why does Blockasaurus ask you to authenticate your Twitter account
