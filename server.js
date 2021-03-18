@@ -312,6 +312,30 @@ app.post('/validate-user', function(request, response) {
 });
 
 
+app.get("/check-rate-limits", function(request, response) {
+  var accessTokenPair = request.body.accessTokenPair;
+  
+  var client = makeClient(accessTokenPair);
+  try {
+    client.get(
+      "application/rate_limit_status",
+      { resources: '/application/rate_limit_status,/friendships/lookup,' },
+      function(error, friendships, resp) {
+        if (error) {
+          response.json(error);
+        } else {
+          response.json(friendships);
+        }
+      }
+    );
+  } catch (error) {
+    response.json(error);
+    return;
+  }
+  client = null;
+});
+
+
 
 // app.post("/block-one", function(request, response) {
 //   var access_token = request.body.access_token;

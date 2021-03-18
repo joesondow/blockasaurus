@@ -72,6 +72,33 @@ var logout = function() {
     }
   };
   
+  var checkRateLimits = function() {
+    jQuery.ajax({
+      method: "GET",
+      url: "/check-rate-limits",
+      data: {
+        accessTokenPair: accessTokenPair
+      },
+      success: function(data) {
+        // data is an array of objects.
+
+        for (var i = 0; i < data.length; i++) {
+          var friendship = data[i];
+          var screenName = friendship.screen_name;
+          var idStr = friendship.id_str;
+          var connections = friendship.connections;
+          if (connections && connections.some(conn => conn === "blocking")) {
+            console.log("Already blocked " + screenName);
+            jQuery('#td_status_' + screenName).html('Already blocked');
+          } else {
+            console.log("Not yet blocked " + screenName);
+          }
+        }
+      },
+      error: function(data) {}
+    });
+  };
+  
   var checkFriendships = function() {
     jQuery.ajax({
       method: "POST",
